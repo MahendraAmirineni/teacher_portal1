@@ -1,0 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('student-form');
+    form.addEventListener('submit', function(event) {
+        // Example of client-side validation
+        let firstName = form.querySelector('input[name="first_name"]').value;
+        if (!firstName) {
+            alert('First name is required!');
+            event.preventDefault();
+        }
+    });
+});
